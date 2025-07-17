@@ -22,11 +22,23 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
+<<<<<<< HEAD
     public Optional<Cliente> buscarPorId(Long id) {
         return clienteRepository.findById(id);
     }
 
     public void deletar(Long id) {
+=======
+    public Optional<Cliente> buscarPorId(long id) {
+        return clienteRepository.findById(id);
+    }
+
+    public void deletar(long id) {
+>>>>>>> main
         clienteRepository.deleteById(id);
+    }
+
+    public Cliente login(String email, String senha) {
+        return clienteRepository.findByEmailAndSenha(email, senha);
     }
 }

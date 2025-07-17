@@ -8,19 +8,24 @@ public class Auditoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private int sistemaId;
+
+    @Column(nullable = false, length = 255) 
     private String procedimento;
-    @Lob
+
+    @Column(length = 255) 
     private String historico;
+
     private LocalDate dataAuditoria;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+    @Column(length = 255) 
+    private String nomeUsuario;
 
     public int getId() { 
         return id; 
     }
+    
     public void setId(int id) { 
         this.id = id; 
     }
@@ -56,12 +61,12 @@ public class Auditoria {
         this.dataAuditoria = dataAuditoria; 
     }
 
-    public Usuario getUsuario() { 
-        return usuario; 
+    public String getUsuario() { 
+        return nomeUsuario; 
     }
     
-    public void setUsuario(Usuario usuario) { 
-        this.usuario = usuario; 
+    public void setUsuario(String nomeUsuario) { 
+        this.nomeUsuario = nomeUsuario; 
     }
 
     public void agendarAuditoria(LocalDate data) {

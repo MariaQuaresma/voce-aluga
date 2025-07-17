@@ -19,13 +19,21 @@ public class Contrato {
     private Date dataFim;
 
     @Temporal(TemporalType.DATE)
+    @Column(length = 50) 
     private Date dataAssinatura;
+<<<<<<< HEAD
     
+=======
+
+    @Column(length = 255) 
+>>>>>>> main
     private float valor;
     private float valorTotal;
 
     @Column(columnDefinition = "TEXT")
     private String termos;
+
+    @Column(length = 50) 
     private String status;
     private float desconto;
 
