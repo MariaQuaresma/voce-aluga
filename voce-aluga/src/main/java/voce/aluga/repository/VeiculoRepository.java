@@ -1,5 +1,6 @@
 package voce.aluga.repository;
 
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -22,4 +23,12 @@ public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
     
     @Query("SELECT v FROM Veiculo v WHERE v.marca = :marca")
     List<Veiculo> findByMarca(@Param("marca") String marca);
+=======
+import voce.aluga.model.Veiculo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface VeiculoRepository extends JpaRepository<Veiculo, Integer> {
+>>>>>>> main
 }

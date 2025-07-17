@@ -137,3 +137,7 @@ npm run dev
 5. **Implementar validações de negócio**
 6. **Adicionar testes automatizados**
 Projeto acadêmico de engenharia e análise de software para os cursos de Análise e Modelagem e Engenharia de Software do CEFET/RJ UNED Maria da Graça. 
+
+cd voce-aluga
+
+mvn clean install

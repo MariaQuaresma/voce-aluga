@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+<<<<<<< HEAD
 @Table(name = "CLIENTE")
 public class Cliente {
     @Id
@@ -15,6 +16,23 @@ public class Cliente {
     private String email;
     private String telefone;
     private String endereco;
+=======
+public class Cliente extends Usuario {
+
+    @Column(nullable = false, length = 50)
+    private String documento;
+
+    @Column(length = 255)
+    private String fidelidade;
+
+    @Column
+    private boolean listaSuja;
+
+    @Column(nullable = false, unique = true, length = 14)
+    private String cpf;
+
+    @Column(nullable = false, unique = true, length = 20)
+>>>>>>> main
     private String cnh;
     
     @Temporal(TemporalType.DATE)
@@ -28,6 +46,7 @@ public class Cliente {
     @Column(name = "usuarioId")
     private Integer usuarioId;
 
+<<<<<<< HEAD
     public Cliente() {}
 
     // Getters e Setters
@@ -43,10 +62,44 @@ public class Cliente {
     }
     public void setNome(String nome) {
         this.nome = nome;
+=======
+    public String getDocumento() { 
+        return documento; 
     }
 
-    public String getCpf() {
-        return cpf;
+    public void setDocumento(String documento) {
+         this.documento = documento; 
+        }
+
+    public String getFidelidade() { 
+        return fidelidade; 
+    }
+
+    public void setFidelidade(String fidelidade) { 
+        this.fidelidade = fidelidade; 
+    }
+
+    public boolean isListaSuja() { 
+        return listaSuja; 
+    }
+    public void setListaSuja(boolean listaSuja) { 
+        this.listaSuja = listaSuja; 
+    }
+
+    public int resgatarPontosFidelidades() {
+        try {
+            return Integer.parseInt(fidelidade);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+>>>>>>> main
+    }
+
+    public String getCpf() { 
+        return cpf; 
+    }
+    public void setCpf(String cpf) { 
+        this.cpf = cpf; 
     }
     public void setCpf(String cpf) {
         this.cpf = cpf;
@@ -73,8 +126,16 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public String getCnh() {
-        return cnh;
+    public String getCnh() { 
+        return cnh; 
+    }
+    public void setCnh(String cnh) { 
+        this.cnh = cnh; 
+    }
+    
+    public Cliente orElse(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElse'");
     }
     public void setCnh(String cnh) {
         this.cnh = cnh;
@@ -108,4 +169,3 @@ public class Cliente {
         this.usuarioId = usuarioId;
     }
 }
-
