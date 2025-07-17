@@ -22,7 +22,6 @@ export interface Contrato {
   valorTotal: number;
   status?: string | null;
   desconto?: number;
-  formaPagamento?: string;
 }
 
 export interface Veiculo {
@@ -41,7 +40,6 @@ export interface Veiculo {
   disponivel: boolean;
   valorDiaria: number;
   categoria: string;
-  localizacao?: 'ESTOQUE' | 'LOCADORA'; // Nova propriedade para controlar onde está o veículo
 }
 
 export interface Administrador extends Usuario {

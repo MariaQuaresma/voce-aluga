@@ -11,7 +11,6 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminVeiculos from './pages/admin/AdminVeiculos';
 import ClientePerfil from './pages/client/ClientePerfil';
 import ClienteReservas from './pages/client/ClienteReservas';
-import MinhasReservas from './pages/client/MinhasReservas';
 import ClienteHistorico from './pages/client/ClienteHistorico';
 
 const theme = createTheme({
@@ -57,8 +56,6 @@ const AppContent: React.FC = () => {
           return <ClientePerfil />;
         case 'reservas':
           return <ClienteReservas />;
-        case 'minhas-reservas':
-          return <MinhasReservas />;
         case 'historico':
           return <ClienteHistorico />;
         default:

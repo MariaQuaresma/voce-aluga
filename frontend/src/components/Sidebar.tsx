@@ -17,8 +17,7 @@ import {
   Assignment,
   Inventory,
   Person,
-  History,
-  CalendarToday
+  History
 } from '@mui/icons-material';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -35,8 +34,7 @@ const Sidebar: React.FC = () => {
 
   const clientMenuItems = [
     { id: 'perfil', label: 'Meu Perfil', icon: <Person /> },
-    { id: 'reservas', label: 'Solicitar Reserva', icon: <CalendarToday /> },
-    { id: 'minhas-reservas', label: 'Minhas Reservas', icon: <Assignment /> },
+    { id: 'reservas', label: 'Minhas Reservas', icon: <Assignment /> },
     { id: 'historico', label: 'Histórico', icon: <History /> },
   ];
 
